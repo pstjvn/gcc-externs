@@ -13,16 +13,51 @@
 function MaterialConfig() {}
 
 
-/** @type {string|number} */
-MaterialConfig.prototype.id;
-
-
 /** @type {string} */
 MaterialConfig.prototype.content;
 
 
 /** @type {string} */
 MaterialConfig.prototype.classNames;
+
+
+/** @type {boolean} */
+MaterialConfig.prototype.raised;
+
+
+/** @type {boolean} */
+MaterialConfig.prototype.disabled;
+
+
+/** @type {boolean} */
+MaterialConfig.prototype.usePointer;
+
+
+/** @type {boolean} */
+MaterialConfig.prototype.useScroll;
+
+
+/** @type {string} */
+MaterialConfig.prototype.type;
+
+
+/** @type {boolean} */
+MaterialConfig.prototype.checked;
+
+/** @type {pstj.material.icon.Name} */
+MaterialConfig.prototype.icon;
+
+
+// function MaterialFormElementConfig() {}
+// MaterialFormElementConfig.prototype.name;
+// MaterialFormElementConfig.prototype.type;
+// MaterialFormElementConfig.prototype.label;
+// MaterialFormElementConfig.prototype.value;
+// MaterialFormElementConfig.prototype.pattern;
+// MaterialFormElementConfig.prototype.required;
+// MaterialFormElementConfig.prototype.errorText;
+// MaterialFormElementConfig.prototype.values;
+// MaterialFormElementConfig.prototype.labels;
 
 
 
@@ -52,6 +87,10 @@ MaterialInputConfig.prototype.value;
 
 /** @type {string} */
 MaterialInputConfig.prototype.pattern;
+
+
+/** @type {boolean} */
+MaterialInputConfig.prototype.required;
 
 
 /** @type {string} */
@@ -107,6 +146,15 @@ RadioGroupConfig.prototype.labels;
  */
 var MaterialUIConfig;
 
+/**
+ * @constructor
+ * @extends {MaterialConfig}
+ */
+function MaterialUIModel() {};
+
+
+/** @type {number|string} */
+MaterialUIModel.prototype.id;
 
 
 /**
@@ -139,6 +187,16 @@ MaterialUIItem.prototype.config;
  * @type {MaterialUIList}
  */
 MaterialUIItem.prototype.elements;
+
+
+/**
+ * Contains the model definition for the element. Can be pretty much
+ * anything depending on the usage, but the general case would be
+ * for inputs and it would contain all of the possible settings plus
+ * an unique ID to be used with external model bindings.
+ * @type {MaterialUIModel}
+ */
+MaterialUIItem.prototype.model;
 
 
 /**
