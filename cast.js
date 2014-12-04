@@ -17,6 +17,12 @@ chrome.cast.ReceiverActionListener;
 
 
 /**
+ * @type {boolean}
+ */
+chrome.cast.isAvailable;
+
+
+/**
  * Initializes the API. Note that either successCallback and errorCallbackwill
  * be invoked once the API has finished initialization. The sessionListenerand
  * receiverListener may be invoked at any time afterwards, and possibly morethan
