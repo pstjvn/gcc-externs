@@ -44,7 +44,7 @@ MaterialConfig.prototype.type;
 /** @type {boolean} */
 MaterialConfig.prototype.checked;
 
-/** @type {pstj.material.icon.Name} */
+/** @type {pstj.autogen.icons.names} */
 MaterialConfig.prototype.icon;
 
 
